@@ -34,6 +34,14 @@ module.exports = function (grunt) {
 				files: {
 					'tmp/docu.html': ['test/src/**/*.html']
 				}
+			},
+			tre: {
+				options: {
+					head: 'test/tre/head.html'
+				},
+				files: {
+					'tmp/docu.html': ['test/tre/**/*.html']
+				}
 			}
 		},
 

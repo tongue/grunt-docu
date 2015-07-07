@@ -13,8 +13,8 @@ module.exports = function (grunt) {
 	grunt.registerMultiTask('docu', 'Super simple flat documentation generator', function () {
 		// Merge task-specific and/or target-specific options with these defaults.
 		var options = this.options({
-			head: 'src/head.html',
-			foot: 'src/foot.html'
+			head: __dirname + '/src/head.html',
+			foot: __dirname + '/src/foot.html'
 		});
 
 		var src = grunt.file.read(options.head);
@@ -45,7 +45,7 @@ module.exports = function (grunt) {
 
 	function insertTableOfContentsJavascript() {
 		var src = '\n<script type="text/javascript">';
-		src += uglify.minify('src/TableOfContents.js').code;
+		src += uglify.minify(__dirname + '/src/TableOfContents.js').code;
 		src += '</script>\n';
 		return src;
 	}
