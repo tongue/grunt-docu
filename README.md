@@ -71,13 +71,15 @@ In this example, custom options are used to do something else with whatever else
 ```js
 grunt.initConfig({
   docu: {
-    options: {
-      head: 'src/mydocu/head.html',
-      punctuation: 'src/mydocu/foot.html',
-    },
-    files: {
-      'dest/default_options': ['src/mydocu/**/*.html'],
-    },
+  	myDocu: {
+	  options: {
+	    head: 'src/mydocu/head.html',
+	    foot: 'src/mydocu/foot.html',
+	  },
+	  files: {
+	    'dest/default_options': ['src/mydocu/**/*.html'],
+	  },
+  	}
   },
 });
 ```
